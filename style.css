@@ -1,0 +1,486 @@
+/* =========================================
+   ESTILOS BASE E MOBILE FIRST
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.card {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fundo com imagem */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('img/pet.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.top-bar {
+    background-color: #03A9F4;
+    color: #062B57;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-top {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    object-fit: contain;
+}
+
+.top-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   SERVIÇOS
+   ========================================= */
+.servicos-info {
+    padding: 20px 15px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-weight: 900;
+    color: #062B57;
+    margin-bottom: 10px;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 110px;
+    perspective: 1000px;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ajuste para a frente do card */
+.flip-card-front {
+    background-color: #002855 !important;
+    color: white !important;
+    font-size: 16px !important;
+    /* Diminuído levemente de 18px para 16px para caber melhor */
+    font-weight: 800 !important;
+    text-align: center;
+    padding: 10px !important;
+    /* Espaço interno para o texto não bater na borda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajuste para o verso do card */
+.flip-card-back {
+    background-color: #d4af37 !important;
+    color: #002855 !important;
+    transform: rotateY(180deg);
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    /* Garante que nada saia do limite do card */
+}
+
+
+/* =========================================
+   CONTEÚDO
+   ========================================= */
+.main-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.badge {
+    background-color: #03A9F4;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 15px 15px 0;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* --- ESTILO DE MENU (NOME NA ESQUERDA, PREÇO NA DIREITA) --- */
+
+
+.menu-item {
+    display: flex;
+    flex-direction: column; /* Nome em cima, preço embaixo no mobile */
+    align-items: center;    /* Centraliza os textos */
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.servico-nome {
+    font-size: 15px !important;
+    font-weight: 800;
+    margin-bottom: 4px; /* Espaço entre nome e preço */
+}
+
+.servico-preco {
+    font-size: 14px !important;
+    font-weight: 900;
+    color: #d4af37; /* Destaque para o preço */
+}
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+.form-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 25px;
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    margin-top: 10px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 800;
+    color: #062B57;
+    text-transform: uppercase;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    background: white;
+    border-color: #03A9F4;
+    box-shadow: 0 0 8px rgba(3, 169, 244, 0.4);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #128c7e;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    position: relative;
+    z-index: 2;
+    background-color: #03A9F4;
+}
+
+.location-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: background 0.3s;
+}
+
+.location-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.location-text {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.location-subtext {
+    font-size: 14px;
+}
+
+.click-info {
+    font-size: 10px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.bottom-info {
+    background-color: #333;
+    color: white;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+
+.assinatura-dev {
+    color: #ffffff;
+    /* cor do texto */
+    text-decoration: none;
+    /* remove sublinhado */
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.assinatura-dev:hover {
+    color: #d4af37;
+    /* cor quando passa o mouse */
+}
+
+/* =========================================
+   AJUSTES PARA DESKTOP (PC E TABLETS)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    body {
+        align-items: center;
+        padding: 40px 0;
+        background-color: #d1d1d1;
+        /* Um fundo um pouco mais escuro destaca o card */
+    }
+
+    .card {
+        max-width: 900px !important;
+        /* Aumentamos de 450px para 900px */
+        min-height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .top-bar {
+        height: 120px !important;
+        /* Header mais imponente no PC */
+    }
+
+    .logo-top {
+        height: 100px !important;
+        width: 100px !important;
+        left: 40px !important;
+    }
+
+    .top-text {
+        font-size: 28px !important;
+        margin-top: 20px !important;
+        /* Texto maior no PC */
+    }
+
+    .menu-item {
+        /* No PC: Volta para o estilo lado a lado (Hambúrguer) */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px 40px !important;
+    }
+
+
+    .flip-card {
+        height: 60px !important;
+    }
+
+    .form-container {
+        max-width: 600px;
+        /* O formulário não precisa ocupar os 900px, senão fica largo demais */
+        margin: 20px auto !important;
+    }
+
+    .assinatura-dev {
+        color: #ffffff;
+        /* cor do texto */
+        text-decoration: none;
+        /* remove sublinhado */
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 5px;
+        transition: 0.3s;
+    }
+
+    .assinatura-dev:hover {
+        color: #d4af37;
+        /* cor quando passa o mouse */
+    }
+}
+
+/* =========================================
+   BLOQUEIO DE ROTAÇÃO
+   ========================================= */
+#bloqueio-rotacao {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #03A9F4;
+    color: #062B57;
+    z-index: 10000;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conteudo-bloqueio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-rotacao {
+    width: 100px;
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23062B57"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h2C24 4.96 19.33 0 13.5 0c-1.34 0-2.62.24-3.8.69l3.19 3.19 3.59-1.36zM3.52 21.48C.25 19.93-2.09 16.76-2.45 13h-2C-4.5 19.04.17 24 6 24c1.34 0 2.62-.24 3.8-.69l-3.19-3.19-3.29 1.36zM19 8H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 10H5v-8h14v8z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotateDevice 2s infinite ease-in-out;
+}
+
+@keyframes rotateDevice {
+    0% {
+        transform: rotate(0);
+    }
+
+    70% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+#bloqueio-rotacao p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    #bloqueio-rotacao {
+        display: flex;
+    }
+}

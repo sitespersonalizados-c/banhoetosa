@@ -1,0 +1,68 @@
+{
+  "servicos": [
+    {
+      "id": 1,
+      "nome": "Banho e Tosa Completa",
+      "preco": "R$ 150,00",
+      "descricao": "Banho, secagem, tosa no corpo todo (máquina ou tesoura), corte de unhas e limpeza de ouvidos.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 2,
+      "nome": "Apenas Banho",
+      "preco": "R$ 50,00",
+      "descricao": "Higienização profunda com produtos específicos, secagem e escovação.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 3,
+      "nome": "Tosa Higiênica",
+      "preco": "R$ 80,00",
+      "descricao": "Limpeza de pêlos nas patinhas (coxins), região íntima e barriga.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 4,
+      "nome": "Corte de Unha",
+      "preco": "R$ 20,00",
+      "descricao": "Aparo seguro das unhas para evitar ferimentos e barulhos ao andar.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 5,
+      "nome": "Tosa na Tesoura",
+      "preco": "R$ 120,00",
+      "descricao": "Acabamento artístico e manual, deixando o pêlo mais fofinho e natural.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 6,
+      "nome": "Tosa na Máquina",
+      "preco": "R$ 100,00",
+      "descricao": "Corte uniforme e mais curto em todo o corpo.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 7,
+      "nome": "Tosa Bebê",
+      "preco": "R$ 90,00",
+      "descricao": "Corte que imita o visual de filhote, deixando o rosto arredondado.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    },
+    {
+      "id": 8,
+      "nome": "Hidratação",
+      "preco": "R$ 60,00",
+      "descricao": "Tratamento com máscaras de nutrição para dar brilho e maciez aos pêlos.",
+      "cor_frente": "#002855",
+      "cor_verso": "#d4af37"
+    }
+  ]
+}

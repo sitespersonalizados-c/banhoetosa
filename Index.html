@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="orientation" content="portrait">
+
+    <title>Agendamento | Banho & Tosa</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="bloqueio-rotacao">
+        <div class="conteudo-bloqueio">
+            <div class="icone-rotacao"></div>
+            <p>Gire o celular para usar na vertical</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <header class="top-bar">
+            <img src="img/logo.png" alt="Logo" class="logo-top">
+            <div class="top-text">
+                Banho & Tosa<br>
+                <span style="font-weight: 400; font-size: 11px;">CUIDADO E CARINHO</span>
+            </div>
+        </header>
+
+        <section class="servicos-info">
+            <h2 class="section-subtitle">NOSSOS SERVIÇOS</h2>
+            <p style="font-size: 11px; color: #666; margin-bottom: 15px;">Toque nos cards para ver detalhes</p>
+
+            <div class="servicos-grid"></div>
+        </section>
+
+        <main class="main-content">
+            <div class="badge">AGENDA ABERTA</div>
+
+            <p class="description">Solicite seu agendamento abaixo e confirmaremos via WhatsApp!</p>
+
+            <div class="form-container">
+                <form id="petAgendamentoForm">
+                    <div class="input-group">
+                        <label for="nomeDono">Seu Nome</label>
+                        <input type="text" id="nomeDono" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="nomePet">Nome do Pet</label>
+                        <input type="text" id="nomePet" placeholder="Nome do amiguinho" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="servicoPet">O que ele precisa?</label>
+                        <select id="servicoPet">
+                            <option value="Selecione">Selecione um serviço</option>
+                            <option value="Banho e Tosa Completa">Banho e Tosa Completa</option>
+                            <option value="Apenas Banho">Apenas Banho</option>
+                            <option value="Tosa Higiênica">Tosa Higiênica</option>
+                            <option value="Corte de Unha">Corte de Unha</option>
+                            <option value="Tosa na Tesoura">Tosa na Tesoura</option>
+                            <option value="Tosa na Maquina">Tosa na Máquina</option>
+                            <option value="Tosa Bebe">Tosa Bebê</option>
+                            <option value="Hidratacao">Hidratação</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="periodoPet">Melhor Período</label>
+                        <select id="periodoPet">
+                            <option value="Manhã">Manhã</option>
+                            <option value="Tarde">Tarde</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">AGENDAR VIA WHATSAPP</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Danilo+Eduardo+Rio+Ramos+446+Jardim+Sao+Jose+II+Sao+Jose+dos+Campos"
+                target="_blank" class="location-link">
+                <div class="footer-location">
+                    <span class="btn-label">NOSSA LOCALIZAÇÃO</span>
+                    <span class="location-text">Rua Danilo Eduardo Rio Ramos, 446</span>
+                    <span class="location-subtext">Jardim São José II - SJC</span>
+                    <small class="click-info">CLIQUE PARA ABRIR NO MAPS 📍</small>
+                </div>
+            </a>
+            <div class="bottom-info">
+                <p>&copy; 2026 BANHO &TOSA. Todos os direitos reservados.</p>
+                <a href="https://wa.me/5512997205724?text=Olá%20Cristina,%20vi%20o%20seu%20trabalho%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!"
+                    class="assinatura-dev" target="_blank" rel="noopener noreferrer">
+                    Desenvolvido por Cristina Silva
+                </a>
+
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
